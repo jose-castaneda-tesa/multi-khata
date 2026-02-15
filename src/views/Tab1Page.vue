@@ -37,5 +37,8 @@ import {
   IonCardContent
 } from '@ionic/vue';
 
+import  { useAppStore } from '@/stores/app.store';
+const appStore = useAppStore()
+
 import ExploreContainer from '@/components/ExploreContainer.vue';
 </script>
