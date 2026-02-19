@@ -2,25 +2,23 @@
   <ion-page>
     <ion-header>
       <ion-toolbar>
-        <ion-title>Panel 2</ion-title>
+        <ion-title>Reproductor</ion-title>
       </ion-toolbar>
     </ion-header>
 
-    <ion-content :fullscreen="true">
+    <ion-content class="ion-padding">
 
-      <ion-header collapse="condense">
-        <ion-toolbar color="dark">
-          <ion-title size="large">Panel 2</ion-title>
-        </ion-toolbar>
-      </ion-header>
+      <ion-button expand="block" @click="playSong">
+        ▶ Play
+      </ion-button>
 
-      <ion-card>
-        <ion-card-content>
-          Pantalla principal - Panel 2
-        </ion-card-content>
-      </ion-card>
+      <ion-button expand="block" @click="pauseSong">
+        ⏸ Pause
+      </ion-button>
 
-      <ExploreContainer name="Panel 2" />
+      <ion-button expand="block" @click="stopSong">
+        ⏹ Stop
+      </ion-button>
 
     </ion-content>
   </ion-page>
@@ -33,10 +31,25 @@ import {
   IonToolbar,
   IonTitle,
   IonContent,
-  IonCard,
-  IonCardContent
-} from '@ionic/vue';
+  IonButton
+} from '@ionic/vue'
 
-import ExploreContainer from '@/components/ExploreContainer.vue';
+// Crear el audio UNA sola vez
+const audio = new Audio(
+  new URL('@/assets/audio/lease.mp3', import.meta.url).href
+)
+
+const playSong = () => {
+  audio.play()
+}
+
+const pauseSong = () => {
+  audio.pause()
+}
+
+const stopSong = () => {
+  audio.pause()
+  audio.currentTime = 0
+}
 </script>
 
