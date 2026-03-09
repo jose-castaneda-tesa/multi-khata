@@ -1,55 +1,46 @@
 <template>
-  <ion-page>
-    <ion-header>
-      <ion-toolbar>
-        <ion-title>Reproductor</ion-title>
-      </ion-toolbar>
-    </ion-header>
+<ion-page>
 
-    <ion-content class="ion-padding">
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Cuenta</ion-title>
+  </ion-toolbar>
+</ion-header>
 
-      <ion-button expand="block" @click="playSong">
-        ▶ Play
-      </ion-button>
+<ion-content class="ion-padding">
 
-      <ion-button expand="block" @click="pauseSong">
-        ⏸ Pause
-      </ion-button>
+  <ion-button expand="block" router-link="/tabs/tab2/registro">
+Crear cuenta
+</ion-button>
 
-      <ion-button expand="block" @click="stopSong">
-        ⏹ Stop
-      </ion-button>
+<ion-button expand="block" router-link="/tabs/tab2/login">
+Iniciar sesión
+</ion-button>
 
-    </ion-content>
-  </ion-page>
+</ion-content>
+
+</ion-page>
 </template>
 
-<script setup lang="ts">
+<script>
 import {
-  IonPage,
-  IonHeader,
-  IonToolbar,
-  IonTitle,
-  IonContent,
-  IonButton
+IonPage,
+IonHeader,
+IonToolbar,
+IonTitle,
+IonContent,
+IonButton
 } from '@ionic/vue'
 
-// Crear el audio UNA sola vez
-const audio = new Audio(
-  new URL('@/assets/audio/lease.mp3', import.meta.url).href
-)
-
-const playSong = () => {
-  audio.play()
+export default {
+name: "Tab2Page",
+components:{
+IonPage,
+IonHeader,
+IonToolbar,
+IonTitle,
+IonContent,
+IonButton
 }
-
-const pauseSong = () => {
-  audio.pause()
-}
-
-const stopSong = () => {
-  audio.pause()
-  audio.currentTime = 0
 }
 </script>
-

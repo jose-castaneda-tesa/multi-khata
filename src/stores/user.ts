@@ -17,5 +17,5 @@ export const useUserStore = defineStore('user', () => {
             password: login.value.password,
         })
     }
-    return { registro, login, $login);
+    return { registro, login, $login };
 });
