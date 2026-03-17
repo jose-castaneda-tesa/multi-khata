@@ -1,0 +1,58 @@
+[
+  {
+    "id": "vaporwave",
+    "nombre": "Vaporwave",
+    "descripcion": "Es un microgénero de música electrónica y una estética de internet que surgió a principios de la década de 2010. Originario de géneros experimentales como el hipnagogic Pop, su sonido se define por el uso de muestras picadas, ralentizadas y pesadas de la música de jazz, R&B y lounge de los años ochenta y noventa.",
+    "color": "#4FC3F7",
+
+    "backgroundImage": "/assets/aesthetics/vaporwave/neon_lights_buildings_synthwave_vaporwave_hd_vaporwave.jpg",
+    "background": "linear-gradient(135deg, #ff00cc, #333399)",
+
+    "video": "https://www.youtube.com/embed/3sTMs3By_x8",
+
+    "galeria": [
+      "src/assets/aesthetics/vaporwave/HD-wallpaper-pacific-coast-vaporwave.jpg",
+      "src/assets/aesthetics/vaporwave/HD-wallpaper-artistic-vaporwave.jpg",
+      "src/assets/aesthetics/vaporwave/KusPzk.jpg",
+      "src/assets/aesthetics/vaporwave/vaporwave-neon-room-aesthetic-desktop-wallpaper-preview.jpg"
+    ]
+  },
+
+  {
+    "id": "frutiger-aero",
+    "nombre": "Frutiger Aero",
+    "descripcion": "También conocido como WEB 2.0 Gloss, es un diseño que prevaleción entre los años 2005 a 2013",
+    "color": "#4FC3F7",
+
+    "backgroundImage": "/assets/aesthetics/frutiger-aero/frutiger-aero-wallpaper-i-whipped-up-in-a-few-hours-hoping-v0-jcaq7gsamypc1.webp",
+    "background": "linear-gradient(135deg, #00c6ff, #0072ff)",
+
+    "video": "https://www.youtube.com/embed/sLedBpClnwQ",
+
+    "galeria": [
+      "src/assets/aesthetics/frutiger-aero/71UqxP7delL._AC_UF1000,1000_QL80_.jpg",
+      "src/assets/aesthetics/frutiger-aero/images.jpg",
+      "src/assets/aesthetics/frutiger-aero/frutiger-aero-wallpaper-i-whipped-up-in-a-few-hours-hoping-v0-jcaq7gsamypc1.webp",
+      "src/assets/aesthetics/frutiger-aero/oxewf8m6mpmc1.png"
+    ]
+  },
+
+  {
+    "id": "utopian-scholastic",
+    "nombre": "Utopian Scholastic",
+    "descripcion": "Genero que buscaba enriquecer los diseños educativos y científicos mezclando diversos elementos visuales, como Encarta de Windows 95",
+    "color": "#4FC3F7",
+
+    "backgroundImage": "/assets/aesthetics/frutiger-aero/frutiger-aero-wallpaper-i-whipped-up-in-a-few-hours-hoping-v0-jcaq7gsamypc1.webp",
+    "background": "linear-gradient(135deg, #00c6ff, #0072ff)",
+
+    "video": "https://www.youtube.com/embed/N3odmVGt6hI",
+
+    "galeria": [
+      "src/assets/aesthetics/utopian-scholastic/images2.jpg",
+      "src/assets/aesthetics/utopian-scholastic/Original_27283733e1e5aa7a5afb9964d85eaca2.webp",
+      "src/assets/aesthetics/utopian-scholastic/images.jpg",
+      "src/assets/aesthetics/utopian-scholastic/24b484616d5efad09dbca5b59e30af0f.jpg"
+    ]
+  }
+]

@@ -1,43 +1,36 @@
-<script setup>
-import { ref } from 'vue'
-import { Geolocation } from '@capacitor/geolocation'
-
-const lat = ref(null)
-const lng = ref(null)
-
-const obtenerUbicacion = async () => {
-  try {
-    const position = await Geolocation.getCurrentPosition()
-
-    lat.value = position.coords.latitude
-    lng.value = position.coords.longitude
-
-    console.log("Latitud:", lat.value)
-    console.log("Longitud:", lng.value)
-
-  } catch (error) {
-    console.error("Error obteniendo ubicación", error)
-  }
-}
-</script>
-
 <template>
   <ion-page>
+
     <ion-header>
       <ion-toolbar>
-        <ion-title>GPS</ion-title>
+        <ion-title>Inicio</ion-title>
       </ion-toolbar>
     </ion-header>
 
     <ion-content class="ion-padding">
 
-      <ion-button @click="obtenerUbicacion">
-        Obtener ubicación
-      </ion-button>
+      <h2>Bienvenido</h2>
 
-      <p v-if="lat">Latitud: {{ lat }}</p>
-      <p v-if="lng">Longitud: {{ lng }}</p>
+      <p>
+        Esta aplicación es un mini glosario multimedia sobre
+        cultura artística digital en internet.
+      </p>
+
+      <p>
+        Proyecto desarrollado con Ionic + Vue.
+      </p>
 
     </ion-content>
+
   </ion-page>
 </template>
+
+<script setup>
+import {
+IonPage,
+IonHeader,
+IonToolbar,
+IonTitle,
+IonContent
+} from '@ionic/vue'
+</script>

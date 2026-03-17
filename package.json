@@ -29,6 +29,7 @@
     "chucknorris": "^0.0.0",
     "ionicons": "^7.0.0",
     "pinia": "^3.0.4",
+    "swiper": "^12.1.2",
     "vue": "^3.3.0",
     "vue-router": "^4.2.0"
   },
