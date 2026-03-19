@@ -9,6 +9,7 @@
 
     <ion-content class="ion-padding">
 
+      <!-- 📷 CÁMARA -->
       <ion-button expand="block" @click="iniciarCamara">
         Activar Cámara
       </ion-button>
@@ -36,6 +37,7 @@
         v-if="fotoTomada"
         style="width:100%; margin-top:10px;" />
 
+      <!-- 📍 GPS -->
       <ion-button expand="block" @click="obtenerUbicacion">
         Obtener Ubicación
       </ion-button>
@@ -49,7 +51,7 @@
 </template>
 
 <script setup>
-import { ref } from 'vue'
+import { ref, onBeforeUnmount } from 'vue'
 
 import {
   IonPage,
@@ -74,18 +76,23 @@ const lng = ref(null)
 
 let stream = null
 
+// 📷 ACTIVAR CÁMARA (CON PERMISOS)
 const iniciarCamara = async () => {
   try {
-    stream = await navigator.mediaDevices.getUserMedia({ video: true })
+    // 👉 Solicita permisos en móvil
+    const permisos = await navigator.mediaDevices.getUserMedia({ video: true })
+
+    stream = permisos
     video.value.srcObject = stream
     camaraActiva.value = true
+
   } catch (error) {
     console.error("Error al activar cámara", error)
   }
 }
 
+// 📸 TOMAR FOTO
 const tomarFoto = () => {
-
   const contexto = canvas.value.getContext('2d')
 
   canvas.value.width = video.value.videoWidth
@@ -98,18 +105,34 @@ const tomarFoto = () => {
   fotoTomada.value = true
   camaraActiva.value = false
 
-  if (stream) {
-    stream.getTracks().forEach(track => track.stop())
-  }
+  detenerCamara()
 }
 
+// 🧹 ELIMINAR FOTO
 const eliminarFoto = () => {
   fotoUrl.value = null
   fotoTomada.value = false
 }
 
+// ⛔ DETENER STREAM (CLAVE)
+const detenerCamara = () => {
+  if (stream) {
+    stream.getTracks().forEach(track => track.stop())
+    stream = null
+  }
+}
+
+// 📍 GPS CON PERMISOS
 const obtenerUbicacion = async () => {
   try {
+    // 👉 Pedir permisos explícitamente
+    const permiso = await Geolocation.requestPermissions()
+
+    if (permiso.location === 'denied') {
+      console.warn("Permiso de ubicación denegado")
+      return
+    }
+
     const position = await Geolocation.getCurrentPosition()
 
     lat.value = position.coords.latitude
@@ -119,4 +142,9 @@ const obtenerUbicacion = async () => {
     console.error("Error obteniendo ubicación", error)
   }
 }
+
+// 🧼 LIMPIAR AL SALIR
+onBeforeUnmount(() => {
+  detenerCamara()
+})
 </script>

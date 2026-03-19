@@ -2,57 +2,60 @@
   {
     "id": "vaporwave",
     "nombre": "Vaporwave",
-    "descripcion": "Es un microgénero de música electrónica y una estética de internet que surgió a principios de la década de 2010. Originario de géneros experimentales como el hipnagogic Pop, su sonido se define por el uso de muestras picadas, ralentizadas y pesadas de la música de jazz, R&B y lounge de los años ochenta y noventa.",
+    "descripcion": "Es un microgénero de música electrónica y una estética de internet que surgió a principios de la década de 2010. \n Originario de géneros experimentales como el hipnagogic Pop, su sonido se define por el uso de muestras picadas, ralentizadas y pesadas de la música de jazz, R&B y lounge de los años ochenta y noventa. \n Su diseño es un collage que combina elementos de los 80 y 90, como pisos de azulejos, horizontes de colores, comerciales retro, CGI temprano y logotipos de marcas reconocidas. \n se define como una forma paródica del capitalismo y el utopismo tecnológico. \n a pesar de que las críticas y los medios han catalogado al vaporwave como mediocre por su visión recurrente y carente de innovación, \n se considera en las redes como una estética que permitió la inspiración y futuro desarrollo de nuevos subgeneros, lo que ayudó a evolucionar más alla de susu inicios.",
     "color": "#4FC3F7",
 
-    "backgroundImage": "/assets/aesthetics/vaporwave/neon_lights_buildings_synthwave_vaporwave_hd_vaporwave.jpg",
+    "backgroundImage": "assets/aesthetics/vaporwave/neon_lights_buildings_synthwave_vaporwave_hd_vaporwave.jpg",
     "background": "linear-gradient(135deg, #ff00cc, #333399)",
 
     "video": "https://www.youtube.com/embed/3sTMs3By_x8",
+    "audio": "assets/aesthetics/vaporwave/MACINTOSHPLUS.mp3",
 
     "galeria": [
-      "src/assets/aesthetics/vaporwave/HD-wallpaper-pacific-coast-vaporwave.jpg",
-      "src/assets/aesthetics/vaporwave/HD-wallpaper-artistic-vaporwave.jpg",
-      "src/assets/aesthetics/vaporwave/KusPzk.jpg",
-      "src/assets/aesthetics/vaporwave/vaporwave-neon-room-aesthetic-desktop-wallpaper-preview.jpg"
+      "/assets/aesthetics/vaporwave/HD-wallpaper-pacific-coast-vaporwave.jpg",
+      "/assets/aesthetics/vaporwave/HD-wallpaper-artistic-vaporwave.jpg",
+      "/assets/aesthetics/vaporwave/KusPzk.jpg",
+      "/assets/aesthetics/vaporwave/vaporwave-neon-room-aesthetic-desktop-wallpaper-preview.jpg"
     ]
   },
 
   {
     "id": "frutiger-aero",
     "nombre": "Frutiger Aero",
-    "descripcion": "También conocido como WEB 2.0 Gloss, es un diseño que prevaleción entre los años 2005 a 2013",
+    "descripcion": "También conocido como WEB 2.0 Gloss, \nes un diseño que prevaleción entre los años 2005 a 2013 \n Windows y Apple innovaron al usar diseños basados en figuras de colores vibrantes y claros, conmo tonos azulados y verdes, cristales, efectos de transparencia y elementos naturales como agua, fauna marina, cielos azules \n representando un sistema perfecto y utópico que mezclaba la tecnología con mundos llenos de vida y color.",
     "color": "#4FC3F7",
 
-    "backgroundImage": "/assets/aesthetics/frutiger-aero/frutiger-aero-wallpaper-i-whipped-up-in-a-few-hours-hoping-v0-jcaq7gsamypc1.webp",
+    "backgroundImage": "assets/aesthetics/frutiger-aero/frutiger-aero-wallpaper-i-whipped-up-in-a-few-hours-hoping-v0-jcaq7gsamypc1.webp",
     "background": "linear-gradient(135deg, #00c6ff, #0072ff)",
 
     "video": "https://www.youtube.com/embed/sLedBpClnwQ",
+    "audio": "assets/aesthetics/frutiger-aero/lease.mp3",
 
     "galeria": [
-      "src/assets/aesthetics/frutiger-aero/71UqxP7delL._AC_UF1000,1000_QL80_.jpg",
-      "src/assets/aesthetics/frutiger-aero/images.jpg",
-      "src/assets/aesthetics/frutiger-aero/frutiger-aero-wallpaper-i-whipped-up-in-a-few-hours-hoping-v0-jcaq7gsamypc1.webp",
-      "src/assets/aesthetics/frutiger-aero/oxewf8m6mpmc1.png"
+      "assets/aesthetics/frutiger-aero/71UqxP7delL._AC_UF1000,1000_QL80_.jpg",
+      "assets/aesthetics/frutiger-aero/images.jpg",
+      "assets/aesthetics/frutiger-aero/frutiger-aero-wallpaper-i-whipped-up-in-a-few-hours-hoping-v0-jcaq7gsamypc1.webp",
+      "assets/aesthetics/frutiger-aero/oxewf8m6mpmc1.png"
     ]
   },
 
   {
     "id": "utopian-scholastic",
     "nombre": "Utopian Scholastic",
-    "descripcion": "Genero que buscaba enriquecer los diseños educativos y científicos mezclando diversos elementos visuales, como Encarta de Windows 95",
+    "descripcion": "Genero que buscaba enriquecer los diseños educativos y científicos mezclando diversos elementos visuales, como Encarta de Windows 95 \n utilizaba elementos como modelos 3D primitivos, arquitectura clásica y renacentista, animales, datos sobre el cuerpo humano y una inclinación hacia la cultura egipcia y datos del sistema solar \n sistemas de Windows, libros educativos, software educativo y creativo y formas que representaban una visión profundamente corporativa \n son las que hicieron que el mundo del aprendizaje se sintiera vivo y con la capacidad de despertar l afición de las personas por aprender cosas nuevas.",
     "color": "#4FC3F7",
 
-    "backgroundImage": "/assets/aesthetics/frutiger-aero/frutiger-aero-wallpaper-i-whipped-up-in-a-few-hours-hoping-v0-jcaq7gsamypc1.webp",
+    "backgroundImage": "assets/aesthetics/utopian-scholastic/a4161871336_2.jpg",
     "background": "linear-gradient(135deg, #00c6ff, #0072ff)",
 
     "video": "https://www.youtube.com/embed/N3odmVGt6hI",
+    "audio": "assets/aesthetics/utopian-scholastic/UtopianScholastic.mp3",
 
     "galeria": [
-      "src/assets/aesthetics/utopian-scholastic/images2.jpg",
-      "src/assets/aesthetics/utopian-scholastic/Original_27283733e1e5aa7a5afb9964d85eaca2.webp",
-      "src/assets/aesthetics/utopian-scholastic/images.jpg",
-      "src/assets/aesthetics/utopian-scholastic/24b484616d5efad09dbca5b59e30af0f.jpg"
+      "/assets/aesthetics/utopian-scholastic/images2.jpg",
+      "/assets/aesthetics/utopian-scholastic/Original_27283733e1e5aa7a5afb9964d85eaca2.webp",
+      "/assets/aesthetics/utopian-scholastic/images.jpg",
+      "/assets/aesthetics/utopian-scholastic/24b484616d5efad09dbca5b59e30af0f.jpg"
     ]
   }
 ]

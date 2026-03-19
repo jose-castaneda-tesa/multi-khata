@@ -21,7 +21,12 @@
       }"
     >
 
-      <!-- Imagen principal con tamaño limitado -->
+      <!-- 🎵 REPRODUCTOR (uno solo, controlado) -->
+      <div style="margin-bottom: 15px; text-align: center;">
+        <audio ref="audioPlayer" :src="aesthetic.audio" controls style="width:100%;"></audio>
+      </div>
+
+      <!-- Imagen principal -->
       <img 
         :src="aesthetic.imagen || aesthetic.backgroundImage" 
         style="
@@ -34,11 +39,13 @@
       />
 
       <div class="glass-card" style="margin-bottom: 15px;">
-        <h2>{{ aesthetic.nombre }}</h2>
-        <p>{{ aesthetic.descripcion }}</p>
-      </div>
+  <h2>{{ aesthetic.nombre }}</h2>
+  <p style="white-space: pre-line;">
+    {{ aesthetic.descripcion }}
+  </p>
+</div>
 
-      <!-- GALERÍA SWIPE -->
+      <!-- GALERÍA -->
       <div v-if="aesthetic.galeria?.length">
         <swiper
           :slides-per-view="1"
@@ -62,7 +69,7 @@
         </swiper>
       </div>
 
-      <!-- Botón de video dinámico -->
+      <!-- 🎥 BOTÓN VIDEO -->
       <ion-button
         expand="block"
         v-if="aesthetic.video"  
@@ -80,7 +87,6 @@
 
     </ion-content>
 
-    <!-- Mensaje si no existe estética -->
     <div v-else style="padding:20px; text-align:center; color:#888;">
       Estética no encontrada.
     </div>
@@ -90,12 +96,11 @@
 
 <script setup>
 import { useRoute } from 'vue-router'
+import { computed, ref, watch, onBeforeUnmount } from 'vue'
 import aesthetics from '../data/aesthetics.json'
 
 import { Swiper, SwiperSlide } from 'swiper/vue'
 import 'swiper/css'
-
-import { ref } from 'vue'
 
 import {
   IonPage,
@@ -105,13 +110,36 @@ import {
   IonContent
 } from '@ionic/vue'
 
-// Scroll para futuros efectos (parallax)
+// Scroll (parallax futuro)
 const scrollY = ref(0)
 const handleScroll = (event) => {
   scrollY.value = event.detail.scrollTop
 }
 
-// Obtener estética desde JSON usando el parámetro de ruta
+// ✅ ROUTE REACTIVO
 const route = useRoute()
-const aesthetic = aesthetics.find(a => a.id === route.params.id)
+
+// ✅ AESTHETIC REACTIVO (CLAVE)
+const aesthetic = computed(() =>
+  aesthetics.find(a => a.id === route.params.id)
+)
+
+// 🎵 AUDIO
+const audioPlayer = ref(null)
+
+// ✅ DETENER AUDIO AL CAMBIAR DE TEMA
+watch(() => route.params.id, () => {
+  if (audioPlayer.value) {
+    audioPlayer.value.pause()
+    audioPlayer.value.currentTime = 0
+  }
+})
+
+// ✅ DETENER AUDIO AL SALIR
+onBeforeUnmount(() => {
+  if (audioPlayer.value) {
+    audioPlayer.value.pause()
+    audioPlayer.value.currentTime = 0
+  }
+})
 </script>

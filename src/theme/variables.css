@@ -18,3 +18,61 @@ http://ionicframework.com/docs/theming/ */
   min-height: 100%;
   will-change: background-position;
 }
+
+/* BOTONES FLOTANTES */
+.floating-buttons {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1000;
+}
+
+.float-btn {
+  position: absolute;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: none;
+  overflow: hidden;
+  pointer-events: auto;
+
+  background: rgba(255,255,255,0.2);
+  backdrop-filter: blur(10px);
+
+  box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+  transition: transform 0.2s ease;
+}
+
+.float-btn:active {
+  transform: scale(0.9);
+}
+
+.float-btn img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* POSICIONES */
+.float-btn.left {
+  left: 10px;
+  top: 40%;
+}
+
+.float-btn.right {
+  right: 10px;
+  top: 40%;
+}
+
+.float-btn.bottom {
+  bottom: 90px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.center-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
